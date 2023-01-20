@@ -12,6 +12,7 @@ public class FinishLine : MonoBehaviour
         if(other.tag == "Player"){
             Debug.Log("You finished!");
             FinishEffect.Play();
+            GetComponent<AudioSource>().Play();
             Invoke("ReloadScene", loadDelay);
         }
     }
